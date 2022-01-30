@@ -58,407 +58,93 @@ public class Tic_Tac_Toe extends JFrame {
     /**
      * @param args the command line arguments
      */
+    private void initializationX(int i, int j , int x)
+    {
+        new java.util.Timer().schedule( 
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        xPlayer++ ;
+                        l1.setText(Integer.toString(xPlayer));
+
+
+                        for (int i=0 ; i<9 ; i++)
+                        {
+                            cases[i].setIcon(new ImageIcon(""));
+                            tab[i]="0";
+                            cases[i].setText(""+(i+1)) ;
+                        }
+                    }
+                }, 
+               2000 
+        );
+        cases[i].setIcon(new ImageIcon("121.jpg"));
+        cases[j].setIcon(new ImageIcon("121.jpg"));
+        cases[x].setIcon(new ImageIcon("121.jpg"));
+    }
+    private void initializationO(int i , int j , int x)
+    {
+        new java.util.Timer().schedule( 
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        oPlayer++ ;
+                        l2.setText(Integer.toString(oPlayer));
+
+
+                        for (int i=0 ; i<9 ; i++)
+                        {
+                            cases[i].setIcon(new ImageIcon(""));
+                            tab[i]="0";
+                            cases[i].setText(""+(i+1)) ;
+                        }
+                    }
+                }, 
+               2000 
+        );
+        cases[i].setIcon(new ImageIcon("24.jpg"));
+        cases[j].setIcon(new ImageIcon("24.jpg"));
+        cases[x].setIcon(new ImageIcon("24.jpg"));
+    }
     private void WinningGame()
     {
         //PLAYER X
         if((tab[0] == "X" && tab[1] == "X" && tab[2] == "X") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("121.jpg"));
-            cases[1].setIcon(new ImageIcon("121.jpg"));
-            cases[2].setIcon(new ImageIcon("121.jpg"));
-            
-        }
+            initializationX(0,1,2) ;
         else if( (tab[3] == "X" && tab[4] == "X" && tab[5] == "X") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[3].setIcon(new ImageIcon("121.jpg"));
-            cases[4].setIcon(new ImageIcon("121.jpg"));
-            cases[5].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(3,4,5) ;
         else if( (tab[6] == "X" && tab[7] == "X" && tab[8] == "X" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[6].setIcon(new ImageIcon("121.jpg"));
-            cases[7].setIcon(new ImageIcon("121.jpg"));
-            cases[8].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(6,7,8) ;
         else if( (tab[0] == "X" && tab[3] == "X" && tab[6] == "X") )
-        {
-            
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("121.jpg"));
-            cases[3].setIcon(new ImageIcon("121.jpg"));
-            cases[6].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(0,3,6) ;
         else if( (tab[1] == "X" && tab[4] == "X" && tab[7] == "X" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[1].setIcon(new ImageIcon("121.jpg"));
-            cases[4].setIcon(new ImageIcon("121.jpg"));
-            cases[7].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(1,4,7) ;
         else if( (tab[2] == "X" && tab[5] == "X" && tab[8] == "X" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[2].setIcon(new ImageIcon("121.jpg"));
-            cases[5].setIcon(new ImageIcon("121.jpg"));
-            cases[8].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(2,5,8) ;
         else if( (tab[0] == "X" && tab[4] == "X" && tab[8] == "X") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("121.jpg"));
-            cases[4].setIcon(new ImageIcon("121.jpg"));
-            cases[8].setIcon(new ImageIcon("121.jpg"));
-        }
+            initializationX(0,4,8) ;
         else if( (tab[2] == "X" && tab[4] == "X" && tab[6] == "X" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[2].setIcon(new ImageIcon("24.jpg"));
-            cases[4].setIcon(new ImageIcon("24.jpg"));
-            cases[6].setIcon(new ImageIcon("24.jpg"));
-        }
+            initializationX(2,4,6) ;
         if((tab[0] == "O" && tab[1] == "O" && tab[2] == "O") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("24.jpg"));
-            cases[1].setIcon(new ImageIcon("24.jpg"));
-            cases[2].setIcon(new ImageIcon("24.jpg"));
-            
-        }
+            initializationO(0,1,2) ;
         else if( (tab[3] == "O" && tab[4] == "O" && tab[5] == "O") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[3].setIcon(new ImageIcon("24.jpg"));
-            cases[4].setIcon(new ImageIcon("24.jpg"));
-            cases[5].setIcon(new ImageIcon("24.jpg"));
-        }
+            initializationO(3,4,5) ;
         else if( (tab[6] == "O" && tab[7] == "O" && tab[8] == "O" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
+            initializationO(6,7,8) ;
 
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[6].setIcon(new ImageIcon("24.jpg"));
-            cases[7].setIcon(new ImageIcon("24.jpg"));
-            cases[8].setIcon(new ImageIcon("24.jpg"));
-        }
-        else if( (tab[0] == "O" && tab[3] == "O" && tab[6] == "O") )
-        {
-            
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("24.jpg"));
-            cases[3].setIcon(new ImageIcon("24.jpg"));
-            cases[6].setIcon(new ImageIcon("24.jpg"));
-        }
-        else if( (tab[1] == "O" && tab[4] == "O" && tab[7] == "O" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[1].setIcon(new ImageIcon("24.jpg"));
-            cases[4].setIcon(new ImageIcon("24.jpg"));
-            cases[7].setIcon(new ImageIcon("24.jpg"));
-        }
+        else if( (tab[1] == "O" && tab[4] == "O" && tab[7] == "O") )
+            initializationO(1,4,7) ;
         else if( (tab[2] == "O" && tab[5] == "O" && tab[8] == "O" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[2].setIcon(new ImageIcon("24.jpg"));
-            cases[5].setIcon(new ImageIcon("24.jpg"));
-            cases[8].setIcon(new ImageIcon("24.jpg"));
-        }
+            initializationO(2,5,8) ;
         else if( (tab[0] == "O" && tab[4] == "O" && tab[8] == "O") )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[0].setIcon(new ImageIcon("24.jpg"));
-            cases[4].setIcon(new ImageIcon("24.jpg"));
-            cases[8].setIcon(new ImageIcon("24.jpg"));
-        }
+            initializationO(0,4,8) ;
         else if( (tab[2] == "O" && tab[4] == "O" && tab[6] == "O" ) )
-        {
-            new java.util.Timer().schedule( 
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            xPlayer++ ;
-                            l1.setText(Integer.toString(xPlayer));
-
-
-                            for (int i=0 ; i<9 ; i++)
-                            {
-                                cases[i].setIcon(new ImageIcon(""));
-                                tab[i]="0";
-                                cases[i].setText(""+(i+1)) ;
-                            }
-                        }
-                    }, 
-                   2000 
-            );
-            cases[2].setIcon(new ImageIcon("24.jpg"));
-            cases[4].setIcon(new ImageIcon("24.jpg"));
-            cases[6].setIcon(new ImageIcon("24.jpg"));
-        }
-        
-        
-        
-        
+            initializationO(2,4,6) ;
+        else if( (tab[0] == "O" && tab[3] == "O" && tab[6] == "O" ) )
+            initializationO(0,3,6) ; 
     }
     public Tic_Tac_Toe()
     {
-        
-        
-        
         cases[0]= btn1 ;
         cases[1]= btn2;
         cases[2]= btn3 ;
@@ -469,9 +155,7 @@ public class Tic_Tac_Toe extends JFrame {
         cases[7]= btn8 ;
         cases[8]= btn9 ;
 
-        
-        
-        
+
         //tableaux des boutons
         Icon  j= new ImageIcon("11.png") ;
         JPanel p1 = new JPanel() ;
@@ -489,8 +173,6 @@ public class Tic_Tac_Toe extends JFrame {
         p5.setBackground(new Color(128,128,128)) ;
         p1.setLayout(new GridLayout(3,3,2,2)) ;
         
-
-        
         p3.setLayout(new GridLayout(2,2)) ;
         p4.setLayout(new GridLayout(3,1,4,4)) ;
         
@@ -498,10 +180,7 @@ public class Tic_Tac_Toe extends JFrame {
         
         
         Border border = BorderFactory.createLineBorder(new Color(169,169,169));
-        
-        
-        
-        
+
         for(int i=0 ; i<9 ; i++)
         {
             p1.add(cases[i]) ;
@@ -510,9 +189,7 @@ public class Tic_Tac_Toe extends JFrame {
             cases[i].setBorder(border);
         }
         
-        //Fin Ajout des TextField
-        
-        
+
         p3.add(new JLabel("  GamerX :") ) ;
         p3.add(l1 ) ;
         p3.add(new JLabel("  GamerO :") ) ;
@@ -525,12 +202,9 @@ public class Tic_Tac_Toe extends JFrame {
         Reset.setBackground(new Color(192,192,192)) ;
         p4.add(Exit) ;
         Exit.setBackground(new Color(192,192,192)) ;
-        
-        
-        
+         
         p5.add(p3,BorderLayout.CENTER) ;
         p5.add(p4,BorderLayout.SOUTH) ;
-
 
         add(p1,BorderLayout.CENTER) ;
         add(p5,BorderLayout.EAST) ;
@@ -615,13 +289,7 @@ public class Tic_Tac_Toe extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 NewGamebtn1ActionPerformed(evt);
             }
-        });
-        
-        
-        
-        
-        
-        
+        }); 
     }
     
     private void Resetbtn1ActionPerformed(ActionEvent evt)
@@ -633,9 +301,7 @@ public class Tic_Tac_Toe extends JFrame {
             {
                 tab[i]="0";
                 cases[i].setIcon(new ImageIcon("")) ;
-                cases[i].setText(""+(i+1)) ;
-                
-                        
+                cases[i].setText(""+(i+1)) ;       
             }
         }
     }
@@ -657,8 +323,7 @@ public class Tic_Tac_Toe extends JFrame {
                 tab[i]="0";
                 cases[i].setIcon(new ImageIcon("")) ;
                 cases[i].setText(""+(i+1)) ;
-                
-                        
+       
             }
         }
     }
@@ -670,10 +335,7 @@ public class Tic_Tac_Toe extends JFrame {
             System.exit(0);
         }
     }
-    
-    
-    
-    
+
     public static void main(String[] args) {
         // TODO code application logic here
         Tic_Tac_Toe frame = new Tic_Tac_Toe() ;
@@ -683,6 +345,5 @@ public class Tic_Tac_Toe extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) ;
         frame.setVisible(true) ;
         frame.setBackground(Color.GREEN) ;
-    }
-    
+    } 
 }
